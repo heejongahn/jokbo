@@ -17,22 +17,23 @@ html(lang='en')
         color: black !important;
         }
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top
+    nav.navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
           a.navbar-brand(href='/') Jokbo
-        ul.nav.navbar-nav
-          li.dropdown
-            a.dropdown-toggle(role="button",
-            id="jokboDropdown", data-toggle="dropdown", aria-haspopup="true",
-            aria-expanded="false")
-              | Jokbo
-              span.caret
-            ul.dropdown-menu(aria-labelledby="jokboDropdown")
-              li
-                a.dropdown-item.navbar-brand(href='/jokbo') 족보 찾아보기
-              li
-                a.dropdown-item.navbar-brand(href='/jokbo/upload') 족보 업로드
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(role="button",
+              id="jokboDropdown", data-toggle="dropdown", aria-haspopup="true",
+              aria-expanded="false")
+                | Jokbo
+                span.caret
+              ul.dropdown-menu(aria-labelledby="jokboDropdown")
+                li
+                  a.dropdown-item.navbar-brand(href='/jokbo') Search
+                li
+                  a.dropdown-item.navbar-brand(href='/jokbo/upload') 족보 업로드
     .container
       block content
       hr
