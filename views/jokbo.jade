@@ -2,15 +2,24 @@ extends layout
 
 block content
   h1 Jokbo
+  form.form-inline(action="/jokbo")
+    .form-group
+      label(for='search')
+      input.form-control(type='text', id='search', name='search', placeholder='Search by any attribute')
+    button.btn.btn-default(type='submit') Search
   table.table
     tr
       th Subject
       th Professor
       th Year
       th Semester
+      th Download
     each jokbo in jokbos
       tr
         td= jokbo.subject
         td= jokbo.professor
         td= jokbo.year
         td= jokbo.semester
+        td
+          a(class="button" href="#")
+            i(class="glyphicon glyphicon-file")

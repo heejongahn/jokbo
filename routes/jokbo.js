@@ -11,7 +11,7 @@ var dummy_data =
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('jokbo', {'jokbos': dummy_data});
+  res.render('jokbo', {'jokbos': dummy_data, 'search': req.query.search});
 });
 
 module.exports = router;
