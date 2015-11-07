@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  h1 What are you looking for?
+  h1 어떤 족보를 찾고 계신가요?
   hr
-  form.form-inline(action="/jokbo")
+  form.form-horizontal(action="/jokbo")
     .form-group
-      label(for='search')
-      input.form-control(type='text', id='search', name='search', placeholder='Search by any attribute')
-    button.btn.btn-default(type='submit') Search
+      label.control-label.col-md-2(for='search') 키워드로 검색
+      .col-md-9
+        input.form-control(type='text', id='search', name='search')
+      button.btn.btn-default(type='submit') 검색
   table.table
     tr
       th Subject
