@@ -2,5 +2,15 @@ extends layout
 
 block content
   h1 Jokbo
-  each jokbo in jokbos
-    li= jokbo.subject
+  table.table
+    tr
+      th Subject
+      th Professor
+      th Year
+      th Semester
+    each jokbo in jokbos
+      tr
+        td= jokbo.subject
+        td= jokbo.professor
+        td= jokbo.year
+        td= jokbo.semester
