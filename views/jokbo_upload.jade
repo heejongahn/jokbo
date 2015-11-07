@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1 족보 업로드
+  hr
+  form.form-horizontal(action="/jokbo/upload", method='POST')
+    .form-group
+      label.control-label.col-md-1(for='subject') 과목 이름
+      .col-md-11
+        input.form-control(type='text', id='subject', name='subject')
+    .form-group
+      label.control-label.col-md-1(for='professor') 교수
+      .col-md-11
+        input.form-control(type='text', id='professor', name='professor')
+    .form-group
+      label.control-label.col-md-1(for='year') 년도
+      .col-md-11
+        input.form-control(type='number', id='year', name='year')
+    .form-group
+      label.control-label.col-md-1 학기
+      .col-md-11
+        select.form-control(name='semester')
+          option 봄
+          option 가을
+
+    button.btn.btn-primary(type='submit') Upload
