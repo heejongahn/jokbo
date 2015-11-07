@@ -1,0 +1,22 @@
+{
+  "name": "jokbo",
+  "version": "1.0.0",
+  "description": "Jokbo - share your knowledge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/heejongahn/jokbo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heejongahn/jokbo/issues"
+  },
+  "homepage": "https://github.com/heejongahn/jokbo#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
