@@ -9,9 +9,12 @@ var dummy_data =
       "subject": "형식언어및오토마타",
   }];
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('jokbo', {'jokbos': dummy_data, 'search': req.query.search});
+});
+
+router.get('/upload', function(req, res, next) {
+  res.render('jokbo_upload');
 });
 
 module.exports = router;

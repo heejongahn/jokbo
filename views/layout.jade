@@ -13,12 +13,26 @@ html(lang='en')
         padding-top: 100px;
         padding-bottom: 20px;
         }
+      a.dropdown-item {
+        color: black !important;
+        }
   body
     nav.navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
           a.navbar-brand(href='/') Jokbo
-          a.navbar-brand(href='/jokbo') Search Files
+        ul.nav.navbar-nav
+          li.dropdown
+            a.dropdown-toggle(role="button",
+            id="jokboDropdown", data-toggle="dropdown", aria-haspopup="true",
+            aria-expanded="false")
+              | Jokbo
+              span.caret
+            ul.dropdown-menu(aria-labelledby="jokboDropdown")
+              li
+                a.dropdown-item.navbar-brand(href='/jokbo') 족보 찾아보기
+              li
+                a.dropdown-item.navbar-brand(href='/jokbo/upload') 족보 업로드
     .container
       block content
       hr
@@ -29,5 +43,5 @@ html(lang='en')
       Bootstrap core JavaScript
       ==================================================
     // Placed at the end of the document so the pages load faster
-    script(src='/javascripts/bootstrap.min.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/bootstrap.min.js')
